@@ -1,0 +1,100 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            /* White background for the body */
+            background-color: #ffffff; /* Pure white */
+            color: #1a202c; /* Dark gray text for contrast on white */
+        }
+        /* Custom styles for image placeholders to ensure visibility */
+        .placeholder-img {
+            background-color: #e2e8f0; /* Light gray for placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b; /* Darker gray text */
+            font-size: 1rem;
+            text-align: center;
+            border-radius: 0.5rem; /* Rounded corners for images */
+        }
+
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Delay for sequential animations */
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+
+        /* Ensure elements are hidden before animation starts */
+        .animate-on-scroll {
+            opacity: 0;
+            /* Added for initial hidden state for elements that will be shown/hidden by JS */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        /* Styles for the cart modal */
+        .cart-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .cart-modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-modal-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh; /* Limit height for scrollability */
+            overflow-y: auto; /* Enable scrolling for long carts */
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .cart-modal-overlay.open .cart-modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
