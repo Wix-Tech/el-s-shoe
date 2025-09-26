@@ -15,18 +15,40 @@
     <header id="main-header" class="bg-transparent py-4 px-6 md:px-12 sticky top-0 z-50 border-b border-gray-200 transition-all duration-300 ease-in-out">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo/Brand Name -->
-            <a href="#" class="text-3xl font-bold text-blue-700 hover:text-blue-600 transition duration-300">
+            <a href="#" class="text-xl md:text-2xl font-bold text-blue-700 hover:text-blue-600 transition duration-300 py-1 md:py-0">
                 EL'S WEARS
             </a>
 
             <!-- Navigation (Desktop) -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">Home</a>
-                <a href="#shop" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">Collections</a>
-                <a href="#craftsmanship" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">Craftsmanship</a>
-                <a href="#care-tips" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">Care Tips</a>
-                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">About Us</a>
-                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2 rounded-md">Contact</a>
+            <nav class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-1 items-center">
+                    <a href="#" class="nav-link text-sm md:text-base py-1 px-2">Home</a>
+                    <a href="#shop" class="nav-link text-sm md:text-base py-1 px-2">Collections</a>
+                    <a href="#craftsmanship" class="nav-link text-sm md:text-base py-1 px-2">Craftsmanship</a>
+                    <a href="#care-tips" class="nav-link text-sm md:text-base py-1 px-2">Care Tips</a>
+                    <a href="#about" class="nav-link text-sm md:text-base py-1 px-2">About Us</a>
+                    <a href="#contact" class="nav-link text-sm md:text-base py-1 px-2">Contact</a>
+                    <!-- Cart Icon for Desktop -->
+                    <button id="cart-icon-button" class="relative text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600 ml-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+                <a href="auth.html" id="login-signup-link" class="nav-link nav-login text-sm md:text-base py-1 px-2">Login / Sign Up</a>
+                <div id="profile-icon" style="display:none;" class="relative">
+                    <button id="profile-btn" title="Profile" class="ml-2 p-2 rounded-full hover:bg-blue-100 focus:outline-none">
+                        <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </button>
+                    <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                        <a href="#" id="order-history-link" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Order History</a>
+                        <button id="logout-btn" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50">Logout</button>
+                    </div>
+                </div>
             </nav>
 
             <!-- Mobile Navigation and Cart Icons -->
@@ -56,6 +78,19 @@
             <a href="#care-tips" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Care Tips</a>
             <a href="#about" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">About Us</a>
             <a href="#contact" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Contact</a>
+            <a href="auth.html" id="login-signup-link-mobile" class="block text-center text-lg font-medium text-blue-700 hover:bg-blue-50 py-2 rounded-md border border-blue-700 transition duration-300">Login / Sign Up</a>
+            <div id="profile-icon-mobile" class="flex justify-center relative" style="display:none;">
+                <button id="profile-btn-mobile" title="Profile" class="p-2 rounded-full hover:bg-blue-100 focus:outline-none">
+                    <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+                <div id="profile-dropdown-mobile" class="hidden absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                    <a href="#" id="order-history-link-mobile" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Order History</a>
+                    <button id="logout-btn-mobile" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50">Logout</button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -327,11 +362,114 @@
         </div>
     </div>
 
+    <style>
+        .nav-link {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #374151;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background 0.2s, color 0.2s;
+            text-decoration: none;
+        }
+        .nav-link:hover, .nav-link:focus {
+            color: #2563eb;
+            background: #f1f5f9;
+        }
+        .nav-login {
+            color: #2563eb;
+            border: 1px solid #2563eb;
+            background: #fff;
+        }
+        .nav-login:hover, .nav-login:focus {
+            background: #e0e7ff;
+        }
+    </style>
     <script src="main.js"></script>
     <script>
-        // This script block is intentionally left empty as all core JS logic
-        // has been moved to main.js for better organization.
-        // The mobile menu and sticky header logic are now also in main.js.
+        // Show/hide Login/Sign Up and Profile icon based on login status
+        document.addEventListener('DOMContentLoaded', function() {
+            var loggedIn = localStorage.getItem('loggedIn') === 'true';
+            var link = document.getElementById('login-signup-link');
+            var linkMobile = document.getElementById('login-signup-link-mobile');
+            var profileIcon = document.getElementById('profile-icon');
+            var profileIconMobile = document.getElementById('profile-icon-mobile');
+            if (loggedIn) {
+                if (link) link.style.display = 'none';
+                if (linkMobile) linkMobile.style.display = 'none';
+                if (profileIcon) profileIcon.style.display = 'block';
+                if (profileIconMobile) profileIconMobile.style.display = 'flex';
+            } else {
+                if (link) link.style.display = '';
+                if (linkMobile) linkMobile.style.display = '';
+                if (profileIcon) profileIcon.style.display = 'none';
+                if (profileIconMobile) profileIconMobile.style.display = 'none';
+            }
+
+            // Profile dropdown logic (desktop)
+            var profileBtn = document.getElementById('profile-btn');
+            var profileDropdown = document.getElementById('profile-dropdown');
+            if (profileBtn && profileDropdown) {
+                profileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    profileDropdown.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!profileDropdown.classList.contains('hidden')) {
+                        profileDropdown.classList.add('hidden');
+                    }
+                });
+                profileDropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            // Profile dropdown logic (mobile)
+            var profileBtnMobile = document.getElementById('profile-btn-mobile');
+            var profileDropdownMobile = document.getElementById('profile-dropdown-mobile');
+            if (profileBtnMobile && profileDropdownMobile) {
+                profileBtnMobile.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    profileDropdownMobile.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!profileDropdownMobile.classList.contains('hidden')) {
+                        profileDropdownMobile.classList.add('hidden');
+                    }
+                });
+                profileDropdownMobile.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            // Logout logic (desktop)
+            var logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function() {
+                    localStorage.removeItem('loggedIn');
+                    window.location.reload();
+                });
+            }
+            // Logout logic (mobile)
+            var logoutBtnMobile = document.getElementById('logout-btn-mobile');
+            if (logoutBtnMobile) {
+                logoutBtnMobile.addEventListener('click', function() {
+                    localStorage.removeItem('loggedIn');
+                    window.location.reload();
+                });
+            }
+            // Order History placeholder
+            var orderHistoryLink = document.getElementById('order-history-link');
+            if (orderHistoryLink) {
+                orderHistoryLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Order history feature coming soon!');
+                });
+            }
+            var orderHistoryLinkMobile = document.getElementById('order-history-link-mobile');
+            if (orderHistoryLinkMobile) {
+                orderHistoryLinkMobile.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Order history feature coming soon!');
+                });
+            }
+        });
     </script>
 
 </body>

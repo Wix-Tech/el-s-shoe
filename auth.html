@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2 id="form-title">Login</h2>
+    <form id="auth-form">
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Email" required>
+            </div>
+            <div class="form-group" id="username-group" style="display:none;">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" class="form-input" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="Password" required>
+            </div>
+            <div class="form-group" id="confirm-password-group" style="display:none;">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" id="confirm-password" class="form-input" placeholder="Confirm Password">
+            </div>
+            <div class="form-group" id="password-strength-group" style="display:none;">
+                <span id="password-strength">Very Weak</span>
+            </div>
+            <span id="forgot-password" style="display:block;">Forgot password?</span>
+            <div id="otp-section" style="display:none;">
+                <label for="otp" class="form-label">Enter OTP sent to your email</label>
+                <input type="text" id="otp" class="form-input" placeholder="OTP">
+            </div>
+            <button type="submit" id="submit-btn">Login</button>
+        </form>
+        <p id="toggle-text">Don't have an account? <a href="#" id="toggle-link">Sign Up</a></p>
+        <div id="auth-message"></div>
+        <!-- Password Reset Modal -->
+        <div id="reset-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.3); z-index:1000; align-items:center; justify-content:center;">
+            <div style="background:#fff; padding:2em; border-radius:8px; max-width:350px; margin:auto;">
+                <h3 style="margin-bottom:1em;">Reset Password</h3>
+                <form id="reset-form">
+                    <div id="reset-step-email">
+                        <div class="form-group">
+                            <label for="reset-email" class="form-label">Email</label>
+                            <input type="email" id="reset-email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <button type="button" id="reset-request-otp-btn">Request OTP</button>
+                    </div>
+                    <div id="reset-step-otp" style="display:none;">
+                        <div class="form-group">
+                            <label for="reset-otp" class="form-label">OTP</label>
+                            <input type="text" id="reset-otp" class="form-input" placeholder="OTP" required>
+                        </div>
+                        <button type="button" id="reset-confirm-otp-btn">Confirm OTP</button>
+                    </div>
+                    <div id="reset-step-password" style="display:none;">
+                        <div class="form-group">
+                            <label for="reset-password" class="form-label">New Password</label>
+                            <input type="password" id="reset-password" class="form-input" placeholder="New Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reset-confirm-password" class="form-label">Confirm New Password</label>
+                            <input type="password" id="reset-confirm-password" class="form-input" placeholder="Confirm New Password" required>
+                        </div>
+                        <button type="submit" id="reset-submit-btn">Reset Password</button>
+                    </div>
+                    <button type="button" id="reset-cancel-btn" style="margin-top:1em;">Cancel</button>
+                </form>
+                <div id="reset-message" style="margin-top:1em;"></div>
+            </div>
+        </div>
+        <style>
+            .form-group { margin-bottom: 1rem; text-align: left; }
+            .form-label { font-weight: 500; margin-bottom: 0.25rem; display: block; }
+            .form-input { width: 100%; padding: 0.7rem; border: 1px solid #ccc; border-radius: 4px; }
+            .form-input:focus { border-color: #3182ce; outline: none; }
+            #password-strength { font-size: 0.9em; margin-top: 0.2em; }
+            #forgot-password { color: #2563eb; cursor: pointer; font-size: 0.95em; float: right; margin-top: 0.2em; }
+            #forgot-password:hover { text-decoration: underline; }
+            #otp-section { margin-top: 1em; }
+        </style>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

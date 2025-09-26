@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="address" placeholder="Shipping Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="zip" placeholder="ZIP Code" required>
+            <input type="text" id="card" placeholder="Card Number" required maxlength="19">
+            <input type="text" id="exp" placeholder="MM/YY" required maxlength="5">
+            <input type="text" id="cvv" placeholder="CVV" required maxlength="4">
+            <button type="submit">Place Order</button>
+        </form>
+        <div id="checkout-message"></div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

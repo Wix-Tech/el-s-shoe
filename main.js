@@ -233,21 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (proceedToCheckoutButton) {
         proceedToCheckoutButton.addEventListener('click', () => {
             if (cart.length > 0) {
-                console.log("Proceeding to checkout with cart:", cart);
-                // In a real application, you would redirect to a checkout page
-                // or initiate a payment process here.
-                // For now, we'll just log to the console and clear the cart.
-                // IMPORTANT: In a production environment, replace this alert with a custom modal or redirection.
-                alert("Thank you for your purchase! (This is a placeholder checkout. In a real app, you'd be redirected.)");
-                cart = []; // Clear the cart after "checkout"
-                saveCart();
-                updateCartCount();
-                renderCartItems();
-                if (cartModal) {
-                    cartModal.classList.remove('open'); // Close the cart modal
+                // Check login status
+                if (localStorage.getItem('loggedIn') === 'true') {
+                    window.location.href = 'checkout.html';
+                } else {
+                    window.location.href = 'auth.html';
                 }
             } else {
-                console.log("Cart is empty. Cannot proceed to checkout.");
                 alert("Your cart is empty. Please add items before proceeding to checkout.");
             }
         });
