@@ -22,19 +22,16 @@ const transporter = nodemailer.createTransport({
 });
 
 module.exports = async (req, res) => {
-    // Parse path and method
-    const url = req.url;
     const method = req.method;
-    // Parse body if POST
-    let body = {};
-    if (method === 'POST') {
-        try {
-            body = req.body || JSON.parse(req.body);
-        } catch (e) {}
+    let body = req.body;
+    // For Vercel, req.body is already parsed if JSON
+    if (method !== 'POST' || !body || !body.action) {
+        res.status(400).json({ message: 'Invalid request' });
+        return;
     }
+    const action = body.action;
 
-    // --- Endpoints ---
-    if (url === '/login' && method === 'POST') {
+    if (action === 'login') {
         const { email, password } = body;
         db.get('SELECT * FROM users WHERE email = ?', [email], (err, user) => {
             if (!user || !bcrypt.compareSync(password, user.password)) {
@@ -52,7 +49,7 @@ module.exports = async (req, res) => {
         });
         return;
     }
-    if (url === '/signup' && method === 'POST') {
+    if (action === 'signup') {
         const { email, username, password, otp } = body;
         db.get('SELECT * FROM otps WHERE email = ? AND otp = ? AND expires > ?', [email, otp, Date.now()], (err, row) => {
             if (!row) return res.status(400).json({ message: 'Invalid or expired OTP.' });
@@ -69,7 +66,7 @@ module.exports = async (req, res) => {
         });
         return;
     }
-    if (url === '/send-otp' && method === 'POST') {
+    if (action === 'send-otp') {
         const { email } = body;
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         const expires = Date.now() + 10 * 60 * 1000;
@@ -87,7 +84,25 @@ module.exports = async (req, res) => {
         });
         return;
     }
-    if (url === '/reset-password' && method === 'POST') {
+    if (action === 'forgot-password') {
+        const { email } = body;
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+        const expires = Date.now() + 10 * 60 * 1000;
+        db.run('INSERT INTO otps (email, otp, expires) VALUES (?, ?, ?)', [email, otp, expires], err => {
+            if (err) return res.status(500).json({ message: 'Database error.' });
+            transporter.sendMail({
+                from: 'ohuche90@gmail.com',
+                to: email,
+                subject: 'Password Reset OTP',
+                text: `Your password reset OTP is: ${otp}`
+            }, (err, info) => {
+                if (err) return res.status(500).json({ message: 'Failed to send email.' });
+                res.json({ message: 'Password reset OTP sent to your email.' });
+            });
+        });
+        return;
+    }
+    if (action === 'reset-password') {
         const { email, otp, newPassword } = body;
         db.get('SELECT * FROM otps WHERE email = ? AND otp = ? AND expires > ?', [email, otp, Date.now()], (err, row) => {
             if (!row) return res.status(400).json({ message: 'Invalid or expired OTP.' });
@@ -100,7 +115,7 @@ module.exports = async (req, res) => {
         });
         return;
     }
-    if (url === '/checkout' && method === 'POST') {
+    if (action === 'checkout') {
         const { name, address, city, zip, card, expiry, cvv, email } = body;
         logEvent(`Order placed by ${name} (${email || 'no email'}) for address: ${address}, city: ${city}, zip: ${zip}`);
         transporter.sendMail({
