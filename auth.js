@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
             if (isLogin) {
                 // Login
-                const res = await fetch('/login', {
+                const res = await fetch('/api/server', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
+                    body: JSON.stringify({ action: 'login', email, password })
                 });
                 const data = await res.json();
                 authMessage.textContent = data.message;
@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (!otpSent) {
                     // Send OTP
-                    const otpRes = await fetch('/send-otp', {
+                    const otpRes = await fetch('/api/server', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email })
+                        body: JSON.stringify({ action: 'send-otp', email })
                     });
                     const otpData = await otpRes.json();
                     if (otpRes.ok) {
@@ -136,10 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 // Verify OTP and sign up
                 const otp = otpInput.value;
-                const res = await fetch('/signup', {
+                const res = await fetch('/api/server', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, username, password, otp })
+                    body: JSON.stringify({ action: 'signup', email, username, password, otp })
                 });
                 const data = await res.json();
                 authMessage.textContent = data.message;
@@ -190,10 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 resetMessage.style.color = 'red';
                 return;
             }
-            const res = await fetch('/forgot-password', {
+            const res = await fetch('/api/server', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: resetEmail })
+                body: JSON.stringify({ action: 'forgot-password', email: resetEmail })
             });
             const data = await res.json();
             resetMessage.textContent = data.message;
@@ -233,10 +233,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 resetMessage.style.color = 'red';
                 return;
             }
-            const res2 = await fetch('/reset-password', {
+            const res2 = await fetch('/api/server', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: resetEmail, otp, newPassword: password })
+                body: JSON.stringify({ action: 'reset-password', email: resetEmail, otp, newPassword: password })
             });
             const data2 = await res2.json();
             if (res2.ok) {
