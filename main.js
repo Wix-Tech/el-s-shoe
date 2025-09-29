@@ -70,15 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- Shopping Cart Logic ---
-    const cartIconButton = document.getElementById('cart-icon-button');
-    const cartCountSpan = document.getElementById('cart-count');
+    const cartIconButtons = document.querySelectorAll('#cart-icon-button, #cart-icon-button-mobile');
+    const cartCountSpans = document.querySelectorAll('#cart-count, #cart-count-mobile');
+    // const cartIconButton = document.getElementById('cart-icon-button');
+    // const cartCountSpan = document.getElementById('cart-count');
     const cartModal = document.getElementById('cart-modal');
     const closeCartModalButton = document.getElementById('close-cart-modal');
     const cartItemsContainer = document.getElementById('cart-items-container');
     const emptyCartMessage = document.getElementById('empty-cart-message');
     const cartTotalSpan = document.getElementById('cart-total');
-    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-    const proceedToCheckoutButton = cartModal ? cartModal.querySelector('button.w-full') : null;
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');    
+    const proceedToCheckoutButton = document.getElementById('proceed-to-checkout-btn');
 
     let cart = JSON.parse(localStorage.getItem('elsWearsCart')) || [];
 
@@ -90,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to update cart count in header
     function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCountSpan.textContent = totalItems;
-        cartCountSpan.classList.toggle('hidden', totalItems === 0);
+        cartCountSpans.forEach(span => {
+            span.textContent = totalItems;
+            span.classList.toggle('hidden', totalItems === 0);
+        });
     }
 
     // Function to render cart items in the modal
@@ -210,11 +214,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Open/Close Cart Modal
-    if (cartIconButton && cartModal && closeCartModalButton) {
-        cartIconButton.addEventListener('click', () => {
-            renderCartItems(); // Render items every time modal is opened to ensure it's up-to-date
-            cartModal.classList.add('open');
-        });
+    if (cartIconButtons.length && cartModal && closeCartModalButton) {
+        cartIconButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                renderCartItems(); // Render items every time modal is opened to ensure it's up-to-date
+                cartModal.classList.add('open');
+            });
+        })
 
         closeCartModalButton.addEventListener('click', () => {
             cartModal.classList.remove('open');
