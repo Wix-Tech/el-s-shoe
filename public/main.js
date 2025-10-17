@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchFeaturedProducts = async () => {
         try {
-            const response = await fetch('./products.json');
+            const response = await fetch('/products.json');
             if (!response.ok) throw new Error('Network response was not ok');
             const products = await response.json();
             displayFeatured(products);
