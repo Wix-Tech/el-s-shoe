@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Solid Black Corporate Shoe",
+    "price": "₦15,000",
+    "category": "Corporate Shoes",
+    "mainImg": "images/shoe1.jpeg",
+    "subImg": [
+      "images/shoe2.jpeg",
+      "images/shoe2.jpeg",
+      "images/shoe2.jpeg"
+    ],
+    "description": "Classic black corporate shoe for men, handmade with smooth leather and a durable sole. Perfect for formal and business occasions."
+  },
+  {
+    "id": 2,
+    "name": "Brown Leather Slide",
+    "price": "₦10,000",
+    "category": "Men Slides",
+    "mainImg": "images/shoe3.jpeg",
+    "subImg": [
+      "images/shoe4.jpg",
+      "images/shoe5.jpg",
+      "images/shoe6.jpg"
+    ],
+    "description": "Comfortable and stylish brown handmade slides for casual and semi-formal wear. Made with genuine leather."
+  },
+  {
+    "id": 3,
+    "name": "Classic Men's Sandal",
+    "price": "₦12,500",
+    "category": "Sandals",
+    "mainImg": "images/5b173a4d-2d99-4e58-9d39-54bf9597adb8.jpeg",
+    "subImg": [
+      "images/shoe3.jpg",
+      "images/shoe4.jpg",
+      "images/shoe5.jpg"
+    ],
+    "description": "A timeless sandal design, offering both comfort and elegance. Handcrafted for a perfect fit."
+  },
+  {
+    "id": 4,
+    "name": "Elegant Gold-Strap Slide",
+    "price": "₦9,500",
+    "category": "Women Slides",
+    "mainImg": "images/The internet’s been buzzing about this one_ 🔥….jpeg",
+    "subImg": [
+      "images/shoe2.jpeg",
+      "images/shoe5.jpg",
+      "images/shoe6.jpg"
+    ],
+    "description": "A chic and comfortable slide for women, featuring a stylish gold strap. Ideal for a fashionable, relaxed look."
+  },
+  {
+    "id": 5,
+    "name": "Two-Tone Corporate Shoe",
+    "price": "₦18,000",
+    "category": "Corporate Shoes",
+    "mainImg": "images/bb.jpg",
+    "subImg": [
+      "images/bg.jpg",
+      "images/bb.jpg",
+      "images/bg.jpg"
+    ],
+    "description": "A modern take on the classic corporate shoe, featuring a stylish two-tone design. Handcrafted for excellence."
+  },
+  {
+    "id": 6,
+    "name": "Woven Leather Men's Slide",
+    "price": "₦11,000",
+    "category": "Men Slides",
+    "mainImg": "images/Mens Sneakers Fashion Casual Running Shoes Lover Gym Shoes Light Breathe Comfort Outdoor Air ___.jpeg",
+    "subImg": [
+      "images/shoe4.jpg",
+      "images/shoe3.jpg",
+      "images/shoe2.jpeg"
+    ],
+    "description": "Intricately woven leather slides that combine traditional craftsmanship with modern style."
+  },
+  {
+    "id": 7,
+    "name": "Cross-Strap Leather Sandal",
+    "price": "₦13,000",
+    "category": "Sandals",
+    "mainImg": "images/5b173a4d-2d99-4e58-9d39-54bf9597adb8.jpeg",
+    "subImg": [
+      "images/shoe3.jpg",
+      "images/shoe5.jpg",
+      "images/shoe4.jpg"
+    ],
+    "description": "Durable and fashionable cross-strap sandals, perfect for everyday wear and outdoor activities."
+  }
+]

@@ -3,70 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL'S WEARS - Where Craftsmanship Meets Your Journey</title>
-    <meta property="og:title" content="EL'S WEARS: Where Craftsmanship Meets Your Journey." />
-  <meta property="og:description" content="Discover meticulously designed footwear that embodies strength, sophistication, and enduring quality. Each pair is a testament to our commitment to the modern man's pursuit of excellence." />
-  <meta property="og:image" content="https://www.elsfootwears.name.ng/images/shoe1.jpeg" />
-  <meta property="og:url" content="http://elsfootwears.name.ng" />
+    <title>Els Footwears - Handcrafted For Your Journey</title>
+    <meta property="og:title" content="Els Footwears: Handcrafted For Your Journey" />
+    <meta property="og:description" content="Discover meticulously designed footwear that embodies strength, sophistication, and enduring quality. Each pair is a testament to our commitment to excellence." />
+    <meta property="og:image" content="https://www.elsfootwears.name.ng/images/black-corporate-main.jpg" />
+    <meta property="og:url" content="https://www.elsfootwears.name.ng" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-gray-900">
+<body class="bg-white text-gray-900">
 
     <!-- Header Section -->
-    <header id="main-header" class="bg-transparent py-4 px-6 md:px-12 sticky top-0 z-50 border-b border-gray-200 transition-all duration-300 ease-in-out">
+    <header class="bg-white text-brand-blue py-4 px-6 md:px-12 sticky top-0 z-50 border-b border-gray-200 shadow-sm">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo/Brand Name -->
-            <a href="#" class="text-xl md:text-2xl font-bold text-blue-700 hover:text-blue-600 transition duration-300 py-1 md:py-0">
-                EL'S WEARS
+            <a href="index.html" class="text-xl md:text-2xl font-bold text-brand-blue hover:opacity-80 transition">
+                Els Footwears
             </a>
 
             <!-- Navigation (Desktop) -->
-            <nav class="hidden md:flex items-center space-x-4">
-                <div class="flex space-x-1 items-center">
-                    <a href="#" class="nav-link text-sm md:text-base py-1 px-2">Home</a>
-                    <a href="#shop" class="nav-link text-sm md:text-base py-1 px-2">Collections</a>
-                    <a href="#craftsmanship" class="nav-link text-sm md:text-base py-1 px-2">Craftsmanship</a>
-                    <a href="#care-tips" class="nav-link text-sm md:text-base py-1 px-2">Care Tips</a>
-                    <a href="#about" class="nav-link text-sm md:text-base py-1 px-2">About Us</a>
-                    <a href="#contact" class="nav-link text-sm md:text-base py-1 px-2">Contact</a>
-                    <!-- Cart Icon for Desktop -->
-                    <button id="cart-icon-button" class="relative text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600 ml-2">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                    </button>
-                </div>
-                <a href="auth.html" id="login-signup-link" class="nav-link nav-login text-sm md:text-base py-1 px-2">Login / Sign Up</a>
-                <div id="profile-icon" style="display:none;" class="relative">
-                    <button id="profile-btn" title="Profile" class="ml-2 p-2 rounded-full hover:bg-blue-100 focus:outline-none">
-                        <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </button>
-                    <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                        <a href="#" id="order-history-link" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Order History</a>
-                        <button id="logout-btn" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50">Logout</button>
-                    </div>
-                </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-brand-blue hover:text-gold-accent transition">Home</a>
+                <a href="products.html" class="text-brand-blue hover:text-gold-accent transition">Collections</a>
+                <a href="#about" class="text-brand-blue hover:text-gold-accent transition">About Us</a>
+                <a href="#contact" class="text-brand-blue hover:text-gold-accent transition">Contact</a>
+                <a href="auth.html" class="text-brand-blue hover:text-gold-accent transition">Login / Sign Up</a>
+                <button id="cart-icon-button" class="relative text-brand-blue hover:text-gold-accent focus:outline-none ml-2">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                </button>
             </nav>
 
             <!-- Mobile Navigation and Cart Icons -->
             <div class="flex items-center md:hidden">
-                <!-- Shopping Cart Icon -->
-                <button id="cart-icon-button-mobile" class="relative text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                    <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                <button id="cart-icon-button-mobile" class="relative text-brand-blue hover:text-gold-accent focus:outline-none mr-4">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
                 </button>
-
                 <!-- Mobile Navigation Toggle (Hamburger Icon) -->
-                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600 ml-4">
+                <button id="mobile-menu-button" class="text-brand-blue focus:outline-none">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -75,233 +52,91 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 bg-white rounded-lg shadow-inner py-2">
-            <a href="#" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Home</a>
-            <a href="#shop" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Collections</a>
-            <a href="#craftsmanship" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Craftsmanship</a>
-            <a href="#care-tips" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Care Tips</a>
-            <a href="#about" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">About Us</a>
-            <a href="#contact" class="block text-center text-lg font-medium text-gray-900 hover:bg-gray-100 py-2 rounded-md transition duration-300">Contact</a>
-            <a href="auth.html" id="login-signup-link-mobile" class="block text-center text-lg font-medium text-blue-700 hover:bg-blue-50 py-2 rounded-md border border-blue-700 transition duration-300">Login / Sign Up</a>
-            <div id="profile-icon-mobile" class="flex justify-center relative" style="display:none;">
-                <button id="profile-btn-mobile" title="Profile" class="p-2 rounded-full hover:bg-blue-100 focus:outline-none">
-                    <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                </button>
-                <div id="profile-dropdown-mobile" class="hidden absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                    <a href="#" id="order-history-link-mobile" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Order History</a>
-                    <button id="logout-btn-mobile" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50">Logout</button>
-                </div>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 bg-white shadow-lg py-2">
+            <a href="index.html" class="block text-center text-lg font-medium text-brand-blue hover:bg-gray-100 py-2 rounded-md transition">Home</a>
+            <a href="products.html" class="block text-center text-lg font-medium text-brand-blue hover:bg-gray-100 py-2 rounded-md transition">Collections</a>
+            <a href="#about" class="block text-center text-lg font-medium text-brand-blue hover:bg-gray-100 py-2 rounded-md transition">About Us</a>
+            <a href="#contact" class="block text-center text-lg font-medium text-brand-blue hover:bg-gray-100 py-2 rounded-md transition">Contact</a>
+            <a href="auth.html" class="block text-center text-lg font-medium text-brand-blue hover:bg-gray-100 py-2 rounded-md transition">Login / Sign Up</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-r from-blue-700 to-indigo-800 text-white min-h-screen flex items-center justify-center rounded-b-xl overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('images/bg.jpg');"></div>
-        <div id="hero-content" class="container mx-auto text-center relative z-10 px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fadeInUp">
-                EL'S WEARS: Where Craftsmanship Meets Your Journey.
+    <section class="relative bg-brand-blue text-white min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('images/bg.jpg');"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Handcrafted For Your Journey
             </h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fadeInUp animate-delay-200">
-                Discover meticulously designed footwear that embodies strength, sophistication, and enduring quality. Each pair is a testament to our commitment to the modern man's pursuit of excellence.
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Discover meticulously designed footwear that embodies strength, sophistication, and enduring quality.
             </p>
-            <a href="#shop" class="inline-block bg-white text-blue-700 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold shadow-lg transition duration-300 transform hover:scale-105 animate-fadeInUp animate-delay-400">
-                Explore Our Collections
+            <a href="products.html" class="inline-block bg-white-accent text-brand-blue hover:bg-gold-accent hover:text-white px-8 py-4 rounded-md text-xl font-semibold shadow-lg transition duration-300">
+                See All Collections
             </a>
         </div>
     </section>
 
     <!-- Featured Products Section -->
-    <section id="shop" class="py-16 md:py-24 bg-white text-gray-900 rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
+    <section id="collections" class="py-16 md:py-24 bg-white text-gray-900">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Signature Collections</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-200">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe1.jpeg" alt="Executive Loafers" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Executive Loafer</h3>
-                    <p class="text-gray-700 mb-4">Crafted for the boardroom and beyond. Supreme comfort meets timeless elegance.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$280.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="executive-loafer"
-                                data-product-name="The Executive Loafer"
-                                data-product-price="280.00">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-400">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe2.jpeg" alt="Urban Sneaker" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Urban Commuter</h3>
-                    <p class="text-gray-700 mb-4">Dynamic style and responsive cushioning for the modern city dweller.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$165.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="urban-commuter"
-                                data-product-name="The Urban Commuter"
-                                data-product-price="165.00">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-600">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe3.jpeg" alt="Adventure Boot" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Adventurer Boot</h3>
-                    <p class="text-gray-700 mb-4">Rugged durability and superior grip for your most ambitious expeditions.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$320.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="adventurer-boot"
-                                data-product-name="The Adventurer Boot"
-                                data-product-price="320.00">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- New Product Card 4 (Initially Hidden) -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-200 extra-product-card hidden">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe4.jpeg" alt="Classic Derby" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Classic Derby</h3>
-                    <p class="text-gray-700 mb-4">Timeless design for formal occasions and sophisticated daily wear.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$250.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="classic-derby"
-                                data-product-name="The Classic Derby"
-                                data-product-price="250.00">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- New Product Card 5 (Initially Hidden) -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-400 extra-product-card hidden">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe5.jpeg" alt="Performance Trainer" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Performance Trainer</h3>
-                    <p class="text-gray-700 mb-4">Engineered for peak athletic performance and everyday comfort.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$180.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="performance-trainer"
-                                data-product-name="The Performance Trainer"
-                                data-product-price="180.00">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- New Product Card 6 (Initially Hidden) -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 animate-fadeInUp animate-delay-600 extra-product-card hidden">
-                    <div class="w-full h-80 placeholder-img mb-4">
-                        <img src="images/shoe6.jpeg" alt="Luxury Sandal" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Image+Not+Found';">
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">The Luxury Sandal</h3>
-                    <p class="text-gray-700 mb-4">Sophisticated comfort for leisure and warm-weather elegance.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-700">$110.00</span>
-                        <button class="add-to-cart-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-                                data-product-id="luxury-sandal"
-                                data-product-name="The Luxury Sandal"
-                                data-product-price="110.00">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12 flex justify-center space-x-4">
-                <button id="show-more-products-btn" class="bg-gray-200 text-gray-700 px-8 py-4 rounded-full hover:bg-gray-300 transition duration-300 shadow-md text-lg font-semibold">
-                    Show More Products
-                </button>
-                <button id="show-less-products-btn" class="bg-gray-200 text-gray-700 px-8 py-4 rounded-full hover:bg-gray-300 transition duration-300 shadow-md text-lg font-semibold hidden">
-                    Show Less Products
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Craftsmanship Section -->
-    <section id="craftsmanship" class="py-16 md:py-24 bg-gray-900 text-white rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-blue-500 mb-8 animate-fadeInUp">The EL'S WEARS Difference: Uncompromising Craftsmanship</h2>
-            <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8 animate-fadeInUp animate-delay-200">
-                At EL'S WEARS, we believe true luxury lies in the details. Our footwear is born from a legacy of skilled artisans, combining traditional techniques with innovative design. We select only the finest full-grain leathers, durable synthetics, and advanced cushioning systems to ensure every pair offers exceptional comfort, support, and longevity.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto animate-fadeInUp animate-delay-400">
-                From precision stitching to ergonomic sole design, each element is meticulously considered, resulting in footwear that not only elevates your style but also withstands the rigors of your dynamic life. Experience the difference that dedication to quality makes.
-            </p>
-        </div>
-    </section>
-
-    <!-- ✨ Personalized Shoe Care Tips Section ✨ -->
-    <section id="care-tips" class="py-16 md:py-24 bg-white text-gray-900 rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">✨ Personalized Shoe Care Tips ✨</h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8 animate-fadeInUp animate-delay-200">
-                Enter the type of shoe you own (e.g., "leather boots", "suede sneakers", "running shoes") and get tailored care instructions from our AI assistant.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 animate-fadeInUp animate-delay-400">
-                <input type="text" id="shoe-type-input" placeholder="e.g., leather boots" class="w-full sm:w-80 p-4 rounded-full border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-md" required>
-                <button id="generate-care-tips-btn" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 shadow-md text-lg font-semibold">
-                    Generate Tips
-                </button>
-            </div>
-            <div id="care-tips-output" class="text-left bg-gray-50 p-6 rounded-xl shadow-inner max-w-3xl mx-auto min-h-[150px] flex items-center justify-center text-gray-700 animate-fadeIn animate-delay-600">
-                <p>Your personalized shoe care tips will appear here.</p>
-            </div>
-            <div id="care-tips-loading" class="hidden mt-4 text-blue-600 font-semibold">
-                <p>Generating tips... Please wait.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 md:py-24 bg-white text-gray-900 rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 animate-fadeInUp">What Our Gentlemen Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md animate-fadeInUp animate-delay-200">
-                    <p class="text-lg italic text-gray-700 mb-4">"These loafers are a game-changer. Unmatched comfort for long days, and they look incredibly sharp. EL'S WEARS has earned a loyal customer."</p>
-                    <p class="font-semibold text-blue-700">- David S., Entrepreneur</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md animate-fadeInUp animate-delay-400">
-                    <p class="text-lg italic text-gray-700 mb-4">"I've put my EL'S WEARS boots through tough trails, and they've held up perfectly. Durable, supportive, and surprisingly stylish for outdoor gear."</p>
-                    <p class="font-semibold text-blue-700">- Mark T., Adventurer</p>
-                </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-black">Featured Collections</h2>
+            <div id="featured-collections" class="space-y-16">
+                <!-- Product categories will be dynamically loaded here -->
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 md:py-24 bg-gray-900 text-white rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
+    <section id="about" class="py-16 md:py-24 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-blue-500 mb-8 animate-fadeInUp">Our Legacy</h2>
-            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto animate-fadeInUp animate-delay-200">
-                EL'S WEARS was founded on the principle that exceptional footwear is an essential component of a well-lived life. We are more than just a brand; we are a commitment to quality, integrity, and the enduring spirit of the modern man. Our journey began with a vision to create shoes that are not only a statement of style but also a testament to resilience and comfort.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mt-4 animate-fadeInUp animate-delay-400">
-                Every collection from EL'S WEARS is designed to support you, whether you're navigating the urban landscape, conquering new professional heights, or exploring the great outdoors. We invite you to step into the world of EL'S WEARS and experience footwear crafted for your path.
+            <h2 class="text-4xl font-bold text-black mb-8">Our Legacy</h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Els Footwears was founded on the principle that exceptional footwear is an essential component of a well-lived life. We are more than just a brand; we are a commitment to quality, integrity, and the enduring spirit of the modern individual. Our journey began with a vision to create shoes that are not only a statement of style but also a testament to resilience and comfort.
             </p>
         </div>
     </section>
 
-    <!-- Call to Action / Newsletter Signup -->
-    <section class="py-16 md:py-24 bg-blue-600 text-white rounded-lg shadow-lg mx-4 md:mx-auto max-w-7xl mt-8 animate-on-scroll">
+    <!-- Our Craftsmanship Section -->
+    <section id="craftsmanship" class="py-16 md:py-24 bg-brand-blue text-white mx-4 md:mx-auto max-w-7xl mt-8">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6 animate-fadeInUp">Join The EL'S WEARS Brotherhood</h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 animate-fadeInUp animate-delay-200">
+            <h2 class="text-4xl font-bold text-white mb-8">The EL'S WEARS Difference: Uncompromising Craftsmanship</h2>
+            <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
+                At EL'S WEARS, we believe true luxury lies in the details. Our footwear is born from a legacy of skilled artisans, combining traditional techniques with innovative design. We select only the finest full-grain leathers, durable synthetics, and advanced cushioning systems to ensure every pair offers exceptional comfort, support, and longevity.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                From precision stitching to ergonomic sole design, each element is meticulously considered, resulting in footwear that not only elevates your style but also withstands the rigors of your dynamic life. Experience the difference that dedication to quality makes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 bg-white text-gray-900 mx-4 md:mx-auto max-w-7xl mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">What Our Gentlemen Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4">"These loafers are a game-changer. Unmatched comfort for long days, and they look incredibly sharp. EL'S WEARS has earned a loyal customer."</p>
+                    <p class="font-semibold text-brand-blue">- David S., Entrepreneur</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4">"I've put my EL'S WEARS boots through tough trails, and they've held up perfectly. Durable, supportive, and surprisingly stylish for outdoor gear."</p>
+                    <p class="font-semibold text-brand-blue">- Mark T., Adventurer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Newsletter Signup -->
+    <section class="py-16 md:py-24 bg-brand-blue text-white mx-4 md:mx-auto max-w-7xl mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Join The EL'S WEARS Brotherhood</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
                 Subscribe to our exclusive newsletter for early access to new collections, special offers, and insights into our craftsmanship.
             </p>
-            <form class="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fadeInUp animate-delay-400">
+            <form class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <input type="email" placeholder="Your email address" class="w-full sm:w-80 p-4 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-md" required>
-                <button type="submit" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                <button type="submit" class="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
                     Subscribe
                 </button>
             </form>
@@ -309,172 +144,42 @@
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 py-10 rounded-t-lg mt-8">
+    <footer id="contact" class="bg-brand-blue text-gray-400 py-10 mt-8">
         <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-2xl font-bold text-blue-500 mb-2">EL'S WEARS</h3>
-                    <p class="text-sm text-gray-400">Footwear crafted for your journey.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C17.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056 8.935.331 10.14 1.407 10.463 10.463.043.93.056 1.286.056 3.715 0 2.43-.013 2.784-.056 3.715-.331 8.935-1.407 10.14-10.463 10.463-.93.043-1.286.056-3.715.056s-2.784-.013-3.715-.056c-8.935-.331-10.14-1.407-10.463-10.463.93-.043 1.286-.056 3.715-.056zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M.271 2.215a.75.75 0 00-.022 1.062L2.73 6.205 0 9.04a.75.75 0 001.06 1.06l3.05-3.05 2.73 2.73a.75.75 0 001.06-1.06L7.84 6.205l2.73-2.73a.75.75 0 00-1.06-1.06L6.78 5.145 4.05 2.415a.75.75 0 00-1.06 0L.27 2.215zM12 2.25a.75.75 0 00-.75.75v18a.75.75 0 001.5 0V3a.75.75 0 00-.75-.75z" />
-                        </svg>
-                    </a>
-                </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Els Footwears</h3>
+            <p class="text-sm">Crafted for your journey.</p>
+            <div class="flex justify-center space-x-6 mt-6 mb-6">
+                <!-- Facebook Icon -->
+                <a href="#" class="text-white hover:text-gold-accent transition" aria-label="Facebook">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="#" class="text-white hover:text-gold-accent transition" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056.93.043 1.56.19 2.18.428.64.248 1.11.59 1.58 1.06.47.412.94.88 1.58 1.06.62.238 1.25.385 2.18.428.93.043 1.285.056 3.715.056s-.013 2.784-.056 3.715c-.043.93-.19 1.56-.428 2.18a3.897 3.897 0 01-1.06 1.58c-.47.47-.94.88-1.58 1.06-.62.238-1.25.385-2.18.428-.93.043-1.285.056-3.715.056s-2.784-.013-3.715-.056c-.93-.043-1.56-.19-2.18-.428a3.897 3.897 0 01-1.58-1.06c-.47-.47-.88-.94-1.06-1.58-.238-.62-.385-1.25-.428-2.18-.043-.93-.056-1.285-.056-3.715s.013-2.784.056-3.715c.043-.93.19-1.56.428-2.18.248-.64.59-1.11 1.06-1.58.47-.47.94-.88 1.58-1.06.62-.238 1.25-.385 2.18-.428.93-.043 1.285-.056 3.715-.056zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- WhatsApp Icon -->
+                <a href="#" class="text-white hover:text-gold-accent transition" aria-label="WhatsApp">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.38 1.25 4.85L2 22l5.3-1.38c1.41.71 3 .98 4.74.98h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.51 16.04c-.27-.13-1.59-.78-1.84-.87-.25-.09-.43-.13-.62.13-.19.27-.7.87-.86 1.04-.16.17-.32.19-.59.06-.27-.13-1.14-.42-2.17-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.3.4-.4.13-.1.17-.17.25-.28.08-.11.04-.21-.02-.34s-.62-1.49-.84-2.04c-.23-.55-.46-.48-.62-.48-.16 0-.34-.02-.52-.02-.19 0-.48.07-.73.35-.25.28-.97.95-1.17 2.34-.21 1.39.24 2.72.4 2.92.16.2 1.02 1.63 2.48 2.3.35.16.62.26.83.33.32.12.62.1.86.06.27-.05.86-.35 1.01-.69.15-.34.15-.63.1-.69-.05-.06-.19-.1-.41-.23z" /></svg>
+                </a>
             </div>
-            <p class="text-sm text-gray-400">&copy; 2025 EL'S WEARS. All rights reserved.</p>
+            <p class="text-sm mt-4">&copy; 2024 Els Footwears. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Shopping Cart Modal -->
-    <div id="cart-modal" class="cart-modal-overlay">
-        <div class="cart-modal-content text-gray-900">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-3xl font-bold">Your Cart</h2>
-                <button id="close-cart-modal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <div id="cart-items-container" class="space-y-4 mb-6">
-                <!-- Cart items will be rendered here by JavaScript -->
-                <p id="empty-cart-message" class="text-gray-600 text-center text-lg">Your cart is empty.</p>
-            </div>
-
-            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
-                <span class="text-xl font-bold">Total:</span>
-                <span id="cart-total" class="text-2xl font-bold text-blue-700">$0.00</span>
-            </div>
-
-            <button id="proceed-to-checkout-btn" class="w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md mt-6 text-lg font-semibold">
-                Proceed to Checkout
-            </button>
-        </div>
-    </div>
-
-    <style>
-        .nav-link {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #374151;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            transition: background 0.2s, color 0.2s;
-            text-decoration: none;
-        }
-        .nav-link:hover, .nav-link:focus {
-            color: #2563eb;
-            background: #f1f5f9;
-        }
-        .nav-login {
-            color: #2563eb;
-            border: 1px solid #2563eb;
-            background: #fff;
-        }
-        .nav-login:hover, .nav-login:focus {
-            background: #e0e7ff;
-        }
-    </style>
-    <script src="main.js"></script>
     <script>
-        // Show/hide Login/Sign Up and Profile icon based on login status
-        document.addEventListener('DOMContentLoaded', function() {
-            var loggedIn = localStorage.getItem('loggedIn') === 'true';
-            var link = document.getElementById('login-signup-link');
-            var linkMobile = document.getElementById('login-signup-link-mobile');
-            var profileIcon = document.getElementById('profile-icon');
-            var profileIconMobile = document.getElementById('profile-icon-mobile');
-            if (loggedIn) {
-                if (link) link.style.display = 'none';
-                if (linkMobile) linkMobile.style.display = 'none';
-                if (profileIcon) profileIcon.style.display = 'block';
-                if (profileIconMobile) profileIconMobile.style.display = 'flex';
-            } else {
-                if (link) link.style.display = '';
-                if (linkMobile) linkMobile.style.display = '';
-                if (profileIcon) profileIcon.style.display = 'none';
-                if (profileIconMobile) profileIconMobile.style.display = 'none';
-            }
-
-            // Profile dropdown logic (desktop)
-            var profileBtn = document.getElementById('profile-btn');
-            var profileDropdown = document.getElementById('profile-dropdown');
-            if (profileBtn && profileDropdown) {
-                profileBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    profileDropdown.classList.toggle('hidden');
-                });
-                document.addEventListener('click', function(e) {
-                    if (!profileDropdown.classList.contains('hidden')) {
-                        profileDropdown.classList.add('hidden');
+        // Tailwind custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#004A99',
+                        'gold-accent': '#d4af37',
                     }
-                });
-                profileDropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+                }
             }
-
-            // Profile dropdown logic (mobile)
-            var profileBtnMobile = document.getElementById('profile-btn-mobile');
-            var profileDropdownMobile = document.getElementById('profile-dropdown-mobile');
-            if (profileBtnMobile && profileDropdownMobile) {
-                profileBtnMobile.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    profileDropdownMobile.classList.toggle('hidden');
-                });
-                document.addEventListener('click', function(e) {
-                    if (!profileDropdownMobile.classList.contains('hidden')) {
-                        profileDropdownMobile.classList.add('hidden');
-                    }
-                });
-                profileDropdownMobile.addEventListener('click', function(e) { e.stopPropagation(); });
-            }
-
-            // Logout logic (desktop)
-            var logoutBtn = document.getElementById('logout-btn');
-            if (logoutBtn) {
-                logoutBtn.addEventListener('click', function() {
-                    localStorage.removeItem('loggedIn');
-                    window.location.reload();
-                });
-            }
-            // Logout logic (mobile)
-            var logoutBtnMobile = document.getElementById('logout-btn-mobile');
-            if (logoutBtnMobile) {
-                logoutBtnMobile.addEventListener('click', function() {
-                    localStorage.removeItem('loggedIn');
-                    window.location.reload();
-                });
-            }
-            // Order History placeholder
-            var orderHistoryLink = document.getElementById('order-history-link');
-            if (orderHistoryLink) {
-                orderHistoryLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Order history feature coming soon!');
-                });
-            }
-            var orderHistoryLinkMobile = document.getElementById('order-history-link-mobile');
-            if (orderHistoryLinkMobile) {
-                orderHistoryLinkMobile.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Order history feature coming soon!');
-                });
-            }
-        });
+        }
     </script>
+    <script src="main.js"></script>
 
 </body>
 </html>

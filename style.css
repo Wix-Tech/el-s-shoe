@@ -1,100 +1,93 @@
-        body {
-            font-family: 'Inter', sans-serif;
-            /* White background for the body */
-            background-color: #ffffff; /* Pure white */
-            color: #1a202c; /* Dark gray text for contrast on white */
-        }
-        /* Custom styles for image placeholders to ensure visibility */
-        .placeholder-img {
-            background-color: #e2e8f0; /* Light gray for placeholder background */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b; /* Darker gray text */
-            font-size: 1rem;
-            text-align: center;
-            border-radius: 0.5rem; /* Rounded corners for images */
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1a202c;
+}
 
-        /* Custom animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.text-gold-accent {
+    color: #d4af37;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+.bg-gold-accent {
+    background-color: #d4af37;
+}
+.bg-white-accent {
+    background-color: #ffffff;
+}
 
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
 
-        .animate-fadeIn {
-            animation: fadeIn 1s ease-out forwards;
-        }
+.product-item {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+}
 
-        /* Delay for sequential animations */
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        .animate-delay-600 { animation-delay: 0.6s; }
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-        /* Ensure elements are hidden before animation starts */
-        .animate-on-scroll {
-            opacity: 0;
-            /* Added for initial hidden state for elements that will be shown/hidden by JS */
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
+/* Buttons */
+.view-button, .add-to-cart-button {
+    display: inline-block;
+    background-color: #004A99; /* brand-blue */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
 
-        /* Styles for the cart modal */
-        .cart-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
+.view-button:hover, .add-to-cart-button:hover {
+    background-color: #003366; /* Darker blue */
+}
 
-        .cart-modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
+.add-to-cart-button {
+    background-color: #d4af37;
+    color: #fff;
+    width: 100%;
+}
 
-        .cart-modal-content {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh; /* Limit height for scrollability */
-            overflow-y: auto; /* Enable scrolling for long carts */
-            position: relative;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
+.add-to-cart-button:hover {
+    background-color: #c09b2d;
+}
 
-        .cart-modal-overlay.open .cart-modal-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
+/* Preview Page */
+.preview-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sub-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sub-image-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.sub-image-item:hover {
+    border-color: #d4af37;
+}
