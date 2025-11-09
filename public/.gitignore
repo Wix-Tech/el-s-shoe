@@ -1,0 +1,4 @@
+# Ignore environment variables and log files
+.env
+site.log
+node_modules

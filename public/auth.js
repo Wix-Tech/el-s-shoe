@@ -21,6 +21,7 @@ function getStrengthText(score) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const API_URL = window.API_CONFIG.API_URL;
     let isLogin = true;
     const form = document.getElementById('auth-form');
     const toggleLink = document.getElementById('toggle-link');
@@ -92,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
             if (isLogin) {
                 // Login
-                const res = await fetch('/api/server', {
+                const res = await fetch(`${API_URL}/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'login', email, password })
+                    body: JSON.stringify({ email, password })
                 });
                 const data = await res.json();
                 authMessage.textContent = data.message;
@@ -117,10 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (!otpSent) {
                     // Send OTP
-                    const otpRes = await fetch('/api/server', {
+                    const otpRes = await fetch(`${API_URL}/send-otp`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ action: 'send-otp', email })
+                        body: JSON.stringify({ email })
                     });
                     const otpData = await otpRes.json();
                     if (otpRes.ok) {
@@ -136,10 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 // Verify OTP and sign up
                 const otp = otpInput.value;
-                const res = await fetch('/api/server', {
+                const res = await fetch(`${API_URL}/signup`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'signup', email, username, password, otp })
+                    body: JSON.stringify({ email, username, password, otp })
                 });
                 const data = await res.json();
                 authMessage.textContent = data.message;
@@ -190,10 +191,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 resetMessage.style.color = 'red';
                 return;
             }
-            const res = await fetch('/api/server', {
+            const res = await fetch(`${API_URL}/forgot-password`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'forgot-password', email: resetEmail })
+                body: JSON.stringify({ email: resetEmail })
             });
             const data = await res.json();
             resetMessage.textContent = data.message;
@@ -233,10 +234,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 resetMessage.style.color = 'red';
                 return;
             }
-            const res2 = await fetch('/api/server', {
+            const res2 = await fetch(`${API_URL}/reset-password`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'reset-password', email: resetEmail, otp, newPassword: password })
+                body: JSON.stringify({ email: resetEmail, otp, newPassword: password })
             });
             const data2 = await res2.json();
             if (res2.ok) {

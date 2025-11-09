@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const formData = new FormData(form);
         const order = {
-            action: 'checkout',
             name: formData.get('name'),
             address: formData.get('address'),
             city: formData.get('city'),
@@ -22,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
             card: formData.get('card'),
             expiry: formData.get('expiry'),
             cvv: formData.get('cvv'),
-            email: formData.get('email') || ''
+            email: formData.get('email')
         };
-        const res = await fetch('/api/server', {
+        const res = await fetch(`${window.API_CONFIG.API_URL}/checkout`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(order)
+            body: JSON.stringify(order),
         });
         const data = await res.json();
         if (res.ok) {
